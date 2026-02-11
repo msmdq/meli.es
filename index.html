@@ -13,37 +13,107 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0a0a0a;
+            background: #000000;
             color: #e0e0e0;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
         }
 
         .container {
-            max-width: 500px;
+            max-width: 700px;
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
 
         .domain {
-            font-size: 4rem;
-            font-weight: 300;
+            font-size: 5rem;
+            font-weight: 200;
             color: #ffffff;
-            margin-bottom: 40px;
-            letter-spacing: 2px;
+            margin-bottom: 15px;
+            letter-spacing: 8px;
+            background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .subtitle {
-            font-size: 1rem;
-            color: #888;
-            margin-bottom: 60px;
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 70px;
             font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .benefits {
+            margin-bottom: 60px;
+            display: grid;
+            gap: 25px;
+        }
+
+        .benefit {
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(20, 20, 20, 0.6) 0%, rgba(30, 30, 30, 0.3) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .benefit:hover {
+            transform: translateY(-5px);
+            border-color: rgba(99, 102, 241, 0.3);
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.1);
+        }
+
+        .benefit-title {
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .benefit-desc {
+            color: #888;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         .contact {
-            margin-top: 60px;
+            margin-top: 70px;
+            padding-top: 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .contact-text {
+            color: #999;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            letter-spacing: 0.5px;
         }
 
         .email {
@@ -51,19 +121,29 @@
             color: #ffffff;
             text-decoration: none;
             font-size: 1.1rem;
-            padding: 12px 30px;
-            border: 1px solid #333;
-            transition: all 0.2s;
+            padding: 16px 40px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
         }
 
         .email:hover {
-            border-color: #666;
-            background: #111;
+            background: rgba(99, 102, 241, 0.1);
+            border-color: rgba(99, 102, 241, 0.4);
+            box-shadow: 0 5px 30px rgba(99, 102, 241, 0.2);
+            transform: translateY(-2px);
         }
 
         @media (max-width: 600px) {
             .domain {
-                font-size: 2.5rem;
+                font-size: 3rem;
+                letter-spacing: 4px;
+            }
+            
+            .benefit {
+                padding: 25px 20px;
             }
         }
     </style>
@@ -73,7 +153,30 @@
         <div class="domain">meli.es</div>
         <div class="subtitle">Dominio en venta</div>
         
+        <div class="benefits">
+            <div class="benefit">
+                <div class="benefit-title">Corto y memorable</div>
+                <div class="benefit-desc">Solo 4 letras. Fácil de recordar, escribir y pronunciar en cualquier idioma.</div>
+            </div>
+            
+            <div class="benefit">
+                <div class="benefit-title">Marca potente</div>
+                <div class="benefit-desc">Perfecto para e-commerce, marketplace, app móvil o cualquier startup digital.</div>
+            </div>
+            
+            <div class="benefit">
+                <div class="benefit-title">SEO friendly</div>
+                <div class="benefit-desc">Dominio corto con extensión .es, ideal para posicionamiento en buscadores.</div>
+            </div>
+            
+            <div class="benefit">
+                <div class="benefit-title">Alta recordación</div>
+                <div class="benefit-desc">Los dominios cortos generan mayor confianza y son más fáciles de compartir.</div>
+            </div>
+        </div>
+        
         <div class="contact">
+            <div class="contact-text">Interesado en adquirir este dominio premium</div>
             <a href="mailto:info@meli.es?subject=Interés en comprar meli.es" class="email">info@meli.es</a>
         </div>
     </div>
