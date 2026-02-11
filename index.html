@@ -41,28 +41,29 @@
         }
 
         .container {
-            max-width: 700px;
+            max-width: 550px;
+            width: 100%;
             text-align: center;
             position: relative;
             z-index: 1;
         }
 
         .domain {
-            font-size: 5rem;
+            font-size: 5.5rem;
             font-weight: 200;
             color: #ffffff;
             margin-bottom: 15px;
             letter-spacing: 8px;
-            background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
         .subtitle {
-            font-size: 0.95rem;
-            color: #666;
-            margin-bottom: 70px;
+            font-size: 1rem;
+            color: #999;
+            margin-bottom: 60px;
             font-weight: 300;
             text-transform: uppercase;
             letter-spacing: 3px;
@@ -71,47 +72,47 @@
         .benefits {
             margin-bottom: 60px;
             display: grid;
-            gap: 25px;
+            gap: 20px;
         }
 
         .benefit {
-            padding: 30px;
-            background: linear-gradient(135deg, rgba(20, 20, 20, 0.6) 0%, rgba(30, 30, 30, 0.3) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
+            padding: 28px 30px;
+            background: linear-gradient(135deg, rgba(30, 30, 30, 0.8) 0%, rgba(40, 40, 40, 0.5) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
         }
 
         .benefit:hover {
-            transform: translateY(-5px);
-            border-color: rgba(99, 102, 241, 0.3);
-            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.1);
+            transform: translateY(-3px);
+            border-color: rgba(99, 102, 241, 0.4);
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.15);
         }
 
         .benefit-title {
             color: #ffffff;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 500;
             margin-bottom: 10px;
             letter-spacing: 0.5px;
         }
 
         .benefit-desc {
-            color: #888;
-            font-size: 0.95rem;
+            color: #b0b0b0;
+            font-size: 1.05rem;
             line-height: 1.6;
         }
 
         .contact {
-            margin-top: 70px;
-            padding-top: 50px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 60px;
+            padding-top: 45px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .contact-text {
-            color: #999;
-            font-size: 0.9rem;
+            color: #b0b0b0;
+            font-size: 1rem;
             margin-bottom: 30px;
             letter-spacing: 0.5px;
         }
@@ -120,30 +121,76 @@
             display: inline-block;
             color: #ffffff;
             text-decoration: none;
-            font-size: 1.1rem;
-            padding: 16px 40px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 1.15rem;
+            padding: 16px 38px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             border-radius: 8px;
             transition: all 0.3s ease;
             letter-spacing: 0.5px;
         }
 
         .email:hover {
-            background: rgba(99, 102, 241, 0.1);
-            border-color: rgba(99, 102, 241, 0.4);
-            box-shadow: 0 5px 30px rgba(99, 102, 241, 0.2);
+            background: rgba(99, 102, 241, 0.15);
+            border-color: rgba(99, 102, 241, 0.5);
+            box-shadow: 0 8px 35px rgba(99, 102, 241, 0.25);
             transform: translateY(-2px);
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
+            .domain {
+                font-size: 4rem;
+                letter-spacing: 5px;
+            }
+            
+            .subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 50px;
+            }
+            
+            .benefit {
+                padding: 25px;
+            }
+            
+            .benefit-title {
+                font-size: 1.1rem;
+            }
+            
+            .benefit-desc {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
             .domain {
                 font-size: 3rem;
                 letter-spacing: 4px;
             }
             
+            .subtitle {
+                font-size: 0.9rem;
+                letter-spacing: 2px;
+            }
+            
+            .benefits {
+                gap: 18px;
+            }
+            
             .benefit {
-                padding: 25px 20px;
+                padding: 22px 20px;
+            }
+            
+            .benefit-title {
+                font-size: 1.05rem;
+            }
+            
+            .benefit-desc {
+                font-size: 0.95rem;
+            }
+            
+            .email {
+                padding: 14px 32px;
+                font-size: 1.05rem;
             }
         }
     </style>
